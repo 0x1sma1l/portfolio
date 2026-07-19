@@ -1,121 +1,39 @@
 <script lang="ts">
-	import { Button } from '$lib/components';
-	import { NAV_LINKS } from '$lib/constants';
 	import { page } from '$app/state';
-	import { fly } from 'svelte/transition';
-	import Logo from './Logo.svelte';
 
-	let currentPath: string = $state('');
-	let menuOpen = $state(false);
-
-	$effect(() => {
-		currentPath = page.url.pathname;
-	});
-
-	const isActive = (path: string) => currentPath.startsWith(path);
-
-	const showMenu = () => {
-		menuOpen = true;
-		document.body.style.overflow = 'hidden';
-	};
-
-	const hideMenu = () => {
-		menuOpen = false;
-		document.body.style.overflow = '';
-	};
+	const links = [
+		{ label: 'Writing', href: '/writing' },
+		{ label: 'Work', href: '/work' }
+	];
 </script>
 
-<header
-	class="border-border-stroke-light flex h-[80px] items-center justify-between border-b bg-white px-6 py-0 lg:px-20 xl:h-full xl:py-8"
->
-	<div
-		class="3xl:max-w-screen-3xl mx-auto flex w-full max-w-screen-xl items-center justify-between 2xl:max-w-screen-2xl"
-	>
-		<div class="w-1/3">
-			<Logo variant="dark" />
-		</div>
+<header class="site-header">
+	<div class="site-header__inner">
+		<a class="wordmark" href="/" aria-label="Ismail Muyideen, home">
+			<img src="/ghost_hand.svg" alt="" width="32" height="32" />
+			<span>15MA1L</span>
+		</a>
 
-		<nav class="hidden w-1/3 items-center justify-center gap-6 lg:flex">
-			{#each NAV_LINKS as navLink}
-				<div class="relative">
-					<a
-						href={navLink.path}
-						class="hover:text-subtext-text text-sm font-medium transition-colors">{navLink.name}</a
-					>
-
-					<div
-						class={`bg-secondary-bg absolute bottom-[-10px] left-1/2 h-1 w-1 -translate-x-1/2 rounded-full transition-all ${isActive(navLink.path) ? 'block' : 'hidden'}`}
-					></div>
-				</div>
+		<nav aria-label="Primary navigation">
+			{#each links as link (link.href)}
+				<a
+					href={link.href}
+					aria-current={page.url.pathname.startsWith(link.href) ? 'page' : undefined}
+					>{link.label}</a
+				>
 			{/each}
+
+			<button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+				<svg class="theme-toggle__sun" aria-hidden="true" viewBox="0 0 24 24">
+					<circle cx="12" cy="12" r="3.5" />
+					<path
+						d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"
+					/>
+				</svg>
+				<svg class="theme-toggle__moon" aria-hidden="true" viewBox="0 0 24 24">
+					<path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z" />
+				</svg>
+			</button>
 		</nav>
-
-		<div class="hidden w-max items-center justify-between gap-8 lg:flex lg:w-1/3">
-			<div class="ml-auto min-w-[120px] flex-shrink-0">
-				<Button
-					label="Get in touch"
-					action={() => {
-						window.location.href = 'mailto:ismailmuyideen.c05@gmail.com';
-					}}
-				/>
-			</div>
-		</div>
-
-		<div class="flex items-center justify-center lg:hidden">
-			{#if !menuOpen}
-				<button class="cursor-pointer" onclick={showMenu}>
-					<img src="/icons/menu_icon.svg" class="h-8 w-8" alt="Open menu" />
-				</button>
-			{/if}
-		</div>
-
-		{#if menuOpen}
-			<div
-				in:fly={{ x: 200, duration: 300 }}
-				out:fly={{ x: 300, duration: 300 }}
-				class="fixed inset-0 z-50 xl:hidden"
-			>
-				<!-- Backdrop -->
-				<div
-					class="absolute inset-0 bg-black/80 opacity-100 backdrop-blur-sm transition-opacity duration-300 ease-in-out"
-					onclick={hideMenu}
-					onkeydown={(e) => e.key === 'Enter' && hideMenu()}
-					tabindex="0"
-					role="button"
-				></div>
-
-				<button
-					class="absolute top-5 right-5 z-40 w-max cursor-pointer transition-transform hover:scale-110"
-					onclick={hideMenu}
-				>
-					<img src="./icons/close_icon.svg" class="h-8 w-8" alt="Close menu" />
-				</button>
-
-				<!-- Menu -->
-				<div
-					class="absolute top-0 right-0 flex h-full w-full translate-x-0 flex-col items-center justify-center gap-10 bg-transparent p-6 transition-transform duration-300 ease-in-out"
-				>
-					<nav class="mt-12 flex flex-col gap-10 text-center">
-						{#each NAV_LINKS as navLink}
-							<a
-								href={navLink.path}
-								onclick={hideMenu}
-								class={`hover:text-tertiary-text tracking-[-0.9px]font-semibold text-[24px] leading-[23px] transition-colors ${isActive(navLink.path) ? 'text-tertiary-text' : 'text-white'}`}
-								>{navLink.name}</a
-							>
-						{/each}
-					</nav>
-
-					<div class="mt-6 flex w-full flex-col items-center justify-end gap-8">
-						<button
-							onclick={() => {}}
-							class="hover:text-primary-text text-primary-text hover:bg-btn-hover-bg cursor-pointer rounded-full bg-white px-6 py-3 text-sm font-medium transition-colors duration-300 ease-in-out"
-						>
-							Get in touch
-						</button>
-					</div>
-				</div>
-			</div>
-		{/if}
 	</div>
 </header>

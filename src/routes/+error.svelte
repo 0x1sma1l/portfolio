@@ -1,14 +1,12 @@
-<script>
-	import SpecialBtn from '$lib/components/SpecialBtn.svelte';
-	import { goto } from '$app/navigation';
+<script lang="ts">
+	import { page } from '$app/state';
 </script>
 
-<div class="mt-[-110px] flex min-h-screen flex-col items-center justify-center">
-	<p class="text-[70px] tracking-[-2.7px]">Whoops! 🫠</p>
+<svelte:head><title>{page.status} — Ismail Muyideen</title></svelte:head>
 
-	<p class="my-4 text-[18px] font-normal">you strayed!</p>
-
-	<div class="mt-10">
-		<SpecialBtn label="Find your way back 🏠" action={() => goto('/')}></SpecialBtn>
-	</div>
-</div>
+<section class="error-page">
+	<p class="eyebrow">{page.status}</p>
+	<h1>{page.status === 404 ? 'That page does not exist.' : 'Something went wrong.'}</h1>
+	<p>{page.error?.message ?? 'The request could not be completed.'}</p>
+	<a href="/">Return home</a>
+</section>

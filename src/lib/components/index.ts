@@ -1,9 +1,0 @@
-export { default as Button } from "./Button.svelte";
-export { default as Dot } from "./Dot.svelte";
-export { default as GetInTouchCard } from "./GetInTouchCard.svelte";
-export { default as SectionHeading } from "./SectionHeading.svelte";
-export { default as SectionSubheading } from "./SectionSubheading.svelte";
-export { default as SkillCard } from "./SkillCard.svelte";
-export { default as SocialCard } from "./SocialCard.svelte";
-export { default as SpecialBtn } from "./SpecialBtn.svelte";
-export { default as ProjectCard } from './ProjectCard.svelte';

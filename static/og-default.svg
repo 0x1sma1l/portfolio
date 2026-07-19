@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Ismail Muyideen</title>
+  <desc id="description">Software engineer. Notes, articles, and selected work.</desc>
+  <rect width="1200" height="630" fill="#f7f7f3"/>
+  <path d="M88 84h1024" stroke="#d9dad3"/>
+  <circle cx="105" cy="545" r="9" fill="#367c2a"/>
+  <text x="88" y="245" fill="#242522" font-family="Arial, sans-serif" font-size="76" font-weight="600">Ismail Muyideen</text>
+  <text x="88" y="330" fill="#666960" font-family="Arial, sans-serif" font-size="36">Software engineer · notes, articles, and selected work</text>
+  <text x="88" y="555" fill="#367c2a" font-family="monospace" font-size="24">heyismail.xyz</text>
+</svg>
