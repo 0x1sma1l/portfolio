@@ -1,0 +1,21 @@
+---
+title: "A durable article title"
+description: "One sentence describing the question or argument."
+date: 2026-07-19
+kind: article
+draft: true
+---
+
+State the question, claim, or problem clearly.
+
+## Context
+
+Explain why it matters.
+
+## Investigation
+
+Show the evidence, implementation, trade-offs, and mistakes.
+
+## Conclusion
+
+Record the resulting mental model and any remaining questions.

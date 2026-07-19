@@ -1,0 +1,9 @@
+---
+title: "A specific observation"
+description: "Optional context that helps a reader decide whether to open the note."
+date: 2026-07-19
+kind: note
+draft: true
+---
+
+Start with the observation. Add context, evidence, commands, or code only when they help preserve the idea.

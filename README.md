@@ -1,28 +1,57 @@
-# heyismail.xyz 🚀✨
+# heyismail.xyz
 
-[![Made with SvelteKit](https://img.shields.io/badge/Made%20with-SvelteKit-orange?logo=svelte)](https://kit.svelte.dev/)
-[![TailwindCSS](https://img.shields.io/badge/Styled%20with-TailwindCSS-38BDF8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![Powered by Sanity](https://img.shields.io/badge/CMS-Sanity.io-F03E2F?logo=sanity)](https://www.sanity.io/)
-[![Deploys by Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-00C7B7?logo=netlify&logoColor=white)](https://www.netlify.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+Ismail Muyideen's personal engineering notebook and work index.
 
+The site is built with SvelteKit, MDsveX, and a small purpose-built stylesheet. Notes, articles, and work entries are Markdown files committed with the source. There is no CMS, animation framework, or client-side application shell.
+
+## Commands
+
+```sh
+npm install
+npm run dev
+npm run content:check
+npm run check
+npm run build
+```
+
+`npm run content:check` validates filenames and frontmatter. It is also run automatically before checks and production builds.
+
+## Content
+
+```text
+src/content/
+├── writing/   notes and articles
+├── work/      selected work and case studies
+└── templates/ starter frontmatter and structures
+```
+
+The filename becomes the stable URL slug. For example:
+
+```text
+src/content/writing/tracing-a-system-call.svx
+→ /writing/tracing-a-system-call
+```
+
+Writing requires:
+
+```yaml
 ---
-
-Welcome to **heyismail.xyz** — my personal portfolio built with **SvelteKit**, **TailwindCSS**, **Sanity CMS**, and **GSAP** for those buttery-smooth animations.
-
-This portfolio showcases my projects, blogs (coming soon...), and a bit about me. Feel free to explore, get inspired, and even contribute if you'd like! 😄
-
+title: 'Tracing a system call'
+date: 2026-07-19
+kind: note
+draft: true
 ---
+```
 
-## 🖼️ Preview
+Use `kind: note` for frequent observations and `kind: article` for longer, deliberate pieces. Drafts appear in local development and are excluded from production pages, route generation, RSS, and the sitemap.
 
-![Screenshot of heyismail.xyz homepage](/static/images/screenshot.png)
+## Architecture
 
----
-
-## 🚀 Tech Stack
-
-- **Frontend:** [SvelteKit](https://kit.svelte.dev/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **CMS:** [Sanity.io](https://www.sanity.io/)
-- **Animations:** [GSAP](https://gsap.com/)
+- SvelteKit with the Netlify adapter
+- MDsveX for build-time Markdown compilation
+- Zod and a dedicated validation command for strict frontmatter
+- Shiki through `rehype-pretty-code` for build-time syntax highlighting
+- A persisted light/dark theme with a progressively enhanced View Transition reveal
+- Repository-native Markdown content
+- RSS and sitemap endpoints generated from published content
+- Satoshi delivered through Fontshare's official web-font API

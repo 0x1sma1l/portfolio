@@ -1,24 +1,59 @@
 // import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import adapter from '@sveltejs/adapter-netlify';
+import { mdsvex } from 'mdsvex';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
+
+function removeCodeTabIndex() {
+	return (tree) => {
+		function visit(node) {
+			if (node.type === 'element' && node.tagName === 'pre' && node.properties) {
+				delete node.properties.tabIndex;
+			}
+
+			if (node.children) node.children.forEach(visit);
+		}
+
+		visit(tree);
+	};
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	extensions: ['.svelte', '.svx'],
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
 	preprocess: [
-		vitePreprocess(),
-		{
-			script: ({ content, attributes }) => {
-				if (attributes.lang === 'ts') {
-					return {
-						code: content,
-						lang: 'ts'
-					};
-				}
-				return { code: content };
-			}
-		}
+		mdsvex({
+			extension: '.svx',
+			highlight: false,
+			remarkPlugins: [remarkGfm],
+			rehypePlugins: [
+				rehypeSlug,
+				[
+					rehypeAutolinkHeadings,
+					{
+						behavior: 'wrap',
+						properties: { className: ['heading-anchor'] }
+					}
+				],
+				[
+					rehypePrettyCode,
+					{
+						theme: {
+							light: 'github-light',
+							dark: 'github-dark'
+						},
+						keepBackground: false
+					}
+				],
+				removeCodeTabIndex
+			]
+		}),
+		vitePreprocess()
 	],
 
 	kit: {

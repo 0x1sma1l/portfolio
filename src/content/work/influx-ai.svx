@@ -1,0 +1,13 @@
+---
+title: "Influx AI"
+year: 2025
+summary: "A Web3 security and analytics application using live cryptocurrency data and AI-assisted analysis."
+details: "I integrated APIs for real-time cryptocurrency data and transaction analytics, and improved existing application paths to make the interface more responsive and usable."
+role: "Frontend engineer (contract)"
+topics:
+  - frontend
+  - api-integration
+draft: false
+links:
+  live: "https://app.influxai.io/"
+---

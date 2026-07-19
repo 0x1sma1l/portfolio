@@ -1,0 +1,14 @@
+---
+title: "Status Kit"
+year: 2025
+summary: "A visual HTTP status-code explorer for web developers."
+details: "I built Status Kit as a focused learning tool for finding and understanding HTTP status codes through a visual interface."
+role: "Creator"
+topics:
+  - web
+  - learning-tool
+draft: false
+links:
+  live: "https://status-kit.netlify.app"
+  source: "https://github.com/notRadioOpaque/status-kit"
+---

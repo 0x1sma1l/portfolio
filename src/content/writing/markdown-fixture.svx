@@ -1,0 +1,97 @@
+---
+title: "Markdown renderer fixture"
+description: "A permanent stress test for the site's technical reading surface."
+date: 2026-07-19
+kind: note
+draft: true
+---
+
+This page is a permanent visual and semantic fixture. It should remain a draft.
+
+## Typography and links
+
+This is a short paragraph. The next paragraph is deliberately longer so line length, wrapping, rhythm, and contrast can be judged across viewport sizes. Technical writing often combines ordinary prose with identifiers such as `AbortController`, flags such as `--inspect`, and links like [the Svelte documentation](https://svelte.dev/docs).
+
+An intentionally long URL should wrap without widening the page: https://example.com/a/very/long/path/that/should/not/cause/the/article/container/to/overflow/on/a/narrow/mobile/viewport?with=a-long-query-value
+
+### Third-level heading
+
+#### Fourth-level heading
+
+##### Fifth-level heading
+
+###### Sixth-level heading
+
+## Lists
+
+- An unordered item
+- An item with nested content
+  - A nested item
+  - Another nested item
+- A final item
+
+1. First ordered item
+2. Second ordered item
+   1. Nested ordered item
+3. Third ordered item
+
+- [x] Completed task
+- [ ] Incomplete task
+
+## Code
+
+Inline code such as `write(fd, buffer, count)` should remain distinct without disrupting the line.
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    puts("hello from C");
+    return 0;
+}
+```
+
+```rust
+fn main() {
+    let message = String::from("hello from Rust");
+    println!("{message}");
+}
+```
+
+```sh
+$ cc hello.c -o hello
+$ ./hello
+hello from C
+```
+
+```text
+This deliberately long line should scroll inside its code block instead of making the entire document wider than the viewport: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+
+## Quotes and separators
+
+> The reader should be able to distinguish a quotation without mistaking it for a decorative card.
+>
+> A quote may contain more than one paragraph.
+
+---
+
+## Table
+
+| Property | Note | Article |
+| --- | --- | --- |
+| Default frequency | High | Low |
+| Expected polish | Useful | Deliberate |
+| Typical length | Short | Long |
+
+## Image
+
+![Default site artwork, used to test responsive content imagery](/og-default.svg)
+
+_A caption-like line should remain visually connected to the image._
+
+## Awkward cases
+
+Anextremelylongunbrokenidentifierthatneedstowrapwithoutcausinghorizontalpageoverflowandwithoutdestroyingthelayout.
+
+<kbd>Ctrl</kbd> + <kbd>C</kbd> should be legible if inline HTML remains enabled.

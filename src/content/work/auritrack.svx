@@ -1,0 +1,13 @@
+---
+title: "Auritrack"
+year: 2024
+summary: "A personal-finance application for budgeting, transaction tracking, and financial analysis."
+details: "I led the frontend implementation, built reusable components to shorten development cycles, collaborated closely with design, and worked on performance improvements measured with PageSpeed Insights."
+role: "Founding frontend engineer (contract)"
+topics:
+  - frontend
+  - performance
+draft: false
+links:
+  live: "https://www.auritrack.com/"
+---

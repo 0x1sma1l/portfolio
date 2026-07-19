@@ -1,0 +1,15 @@
+---
+title: "Project name"
+year: 2026
+summary: "One factual sentence about the problem and outcome."
+details: "A little more context about my contribution and the useful result."
+role: "My role"
+topics:
+  - example
+draft: true
+links:
+  live: "https://example.com"
+  source: "https://github.com/example/project"
+---
+
+Explain the problem, constraints, contribution, important decisions, and what changed as a result.
