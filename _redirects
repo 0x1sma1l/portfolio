@@ -1,0 +1,5 @@
+/about      /          308
+/blog       /writing   308
+/experience /work      308
+/projects   /work      308
+/projects/* /work      308
