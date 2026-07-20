@@ -18,9 +18,9 @@
 		<h1 id="intro-title">Frontend got me here. Systems is next.</h1>
 		<div class="home-intro__copy">
 			<p>
-				Half of what's below is proof of what I've shipped. The other half is a slightly chaotic
-				attempt to become someone who understands what's happening a few layers beneath it. Both
-				halves are still under construction.
+				Half of what's here is proof of what I've been up to. The other half is a slightly chaotic
+				attempt to become someone who understands what's happening a few layers beneath all that
+				stuff. Both halves are still under construction.
 			</p>
 		</div>
 	</section>
@@ -34,9 +34,9 @@
 			<p>
 				My effort is not evenly distributed, and I've made peace with that. Computers get more of it
 				than most things. Some days I wonder what my life would've turned out to be if I'd taken an
-				EE course instead. I like making things with my hands, and one of these days I'll have a
-				proper workshop and a homelab to match, budget permitting. Until then, it's me, my machine,
-				and one question on loop: how does this actually work, underneath everything?
+				EE course instead. I really enjoy tinkering, and hopefully, one of these days I'll have a
+				proper workshop and a homelab to match. Until then, it's me, my machine, and one question on
+				loop: how does this actually work, underneath everything?
 			</p>
 		</div>
 	</section>

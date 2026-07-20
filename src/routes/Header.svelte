@@ -10,8 +10,8 @@
 <header class="site-header">
 	<div class="site-header__inner">
 		<a class="wordmark" href="/" aria-label="Ismail Muyideen, home">
-			<img src="/ghost_hand.svg" alt="" width="32" height="32" />
-			<span>15MA1L</span>
+			<img src="/ghost_hand.svg" alt="" width="18" height="18" />
+			<span>1sma1L</span>
 		</a>
 
 		<nav aria-label="Primary navigation">
