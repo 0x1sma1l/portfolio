@@ -11,7 +11,7 @@
 	<div class="site-header__inner">
 		<a class="wordmark" href="/" aria-label="Ismail Muyideen, home">
 			<img src="/ghost_hand.svg" alt="" width="18" height="18" />
-			<span>1sma1L</span>
+			<span>1sma1l</span>
 		</a>
 
 		<nav aria-label="Primary navigation">
