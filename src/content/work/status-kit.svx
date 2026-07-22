@@ -10,5 +10,5 @@ topics:
 draft: false
 links:
   live: "https://status-kit.netlify.app"
-  source: "https://github.com/notRadioOpaque/status-kit"
+  source: "https://github.com/0x1sma1l/status-kit"
 ---

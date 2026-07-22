@@ -2,7 +2,7 @@
 	<div class="site-footer__inner">
 		<p>© {new Date().getFullYear()} Ismail Muyideen</p>
 		<nav aria-label="Elsewhere">
-			<a href="https://github.com/notRadioOpaque" target="_blank" rel="me noopener noreferrer"
+			<a href="https://github.com/0x1sma1l" target="_blank" rel="me noopener noreferrer"
 				>GitHub</a
 			>
 			<a
