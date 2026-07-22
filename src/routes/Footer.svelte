@@ -6,7 +6,7 @@
 				>GitHub</a
 			>
 			<a
-				href="https://www.linkedin.com/in/notradioopaque/"
+				href="https://www.linkedin.com/in/ismailmuyideen/"
 				target="_blank"
 				rel="me noopener noreferrer">LinkedIn</a
 			>
