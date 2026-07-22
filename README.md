@@ -1,9 +1,8 @@
-# heyismail.xyz
+# Portfolio
 
 Ismail Muyideen's personal engineering notebook and work index.
 
-The site is built with SvelteKit, MDsveX, and a small purpose-built stylesheet. Notes, articles, and work entries are Markdown files committed with the source. There is no CMS, animation framework, or client-side application shell.
-
+The site is built with SvelteKit, MDsveX, and a small purpose-built stylesheet. Notes, articles, and work entries are Markdown files committed with the source.
 ## Commands
 
 ```sh
