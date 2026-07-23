@@ -29,8 +29,12 @@
 						<p class="work-focus"><span>Focus</span> {entry.topics.join(', ')}</p>
 						{#if entry.links}
 							<div class="work-links">
-								{#if entry.links.live}<a href={entry.links.live}>Visit project</a>{/if}
-								{#if entry.links.source}<a href={entry.links.source}>View source</a>{/if}
+								{#if entry.links.live}
+									<a href={entry.links.live} target="_blank" rel="noopener noreferrer">Visit project</a>
+								{/if}
+								{#if entry.links.source}
+									<a href={entry.links.source} target="_blank" rel="noopener noreferrer">View source</a>
+								{/if}
 							</div>
 						{/if}
 					</div>
