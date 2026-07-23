@@ -1,0 +1,14 @@
+---
+title: "Zet"
+year: 2026
+summary: "A local-first, terminal-first Markdown note manager for capturing ideas without leaving the command line."
+details: "I built Zet to make note-taking feel frictionless while I work in my editor and terminal. It lets me create tagged Markdown notes, browse and edit them from the command line, and keep the collection consistent with built-in linting. I use it as a power user myself, and it will become the writing workflow behind the notes and articles on this portfolio."
+role: "Creator"
+topics:
+  - rust
+  - cli
+  - local-first
+draft: false
+links:
+  source: "https://github.com/0x1sma1l/zet"
+---

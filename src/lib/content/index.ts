@@ -10,7 +10,7 @@ const workModules = import.meta.glob('/src/content/work/*.svx', {
 	eager: true
 }) as Record<string, ContentModule<unknown>>;
 
-const featuredWorkOrder = ['auritrack', 'status-kit', 'influx-ai'];
+const featuredWorkOrder = ['auritrack', 'status-kit', 'zet'];
 
 function slugFromPath(path: string): string {
 	const filename = path.split('/').at(-1);
