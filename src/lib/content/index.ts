@@ -10,6 +10,8 @@ const workModules = import.meta.glob('/src/content/work/*.svx', {
 	eager: true
 }) as Record<string, ContentModule<unknown>>;
 
+const featuredWorkOrder = ['auritrack', 'status-kit', 'influx-ai'];
+
 function slugFromPath(path: string): string {
 	const filename = path.split('/').at(-1);
 
@@ -53,5 +55,16 @@ export function getWork(options: { includeDrafts?: boolean } = {}): WorkMetadata
 	return Object.entries(workModules)
 		.map(([path, module]) => parseWork(path, module))
 		.filter((entry) => includeDrafts || !entry.draft)
-		.sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
+		.sort((a, b) => {
+			const aFeaturedIndex = featuredWorkOrder.indexOf(a.slug);
+			const bFeaturedIndex = featuredWorkOrder.indexOf(b.slug);
+			const aIsFeatured = aFeaturedIndex !== -1;
+			const bIsFeatured = bFeaturedIndex !== -1;
+
+			if (aIsFeatured && bIsFeatured) return aFeaturedIndex - bFeaturedIndex;
+			if (aIsFeatured) return -1;
+			if (bIsFeatured) return 1;
+
+			return b.year - a.year || a.title.localeCompare(b.title);
+		});
 }
