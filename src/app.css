@@ -75,9 +75,16 @@ body {
 	line-height: 1.6;
 }
 
-main {
-	flex: 1 0 auto;
+.wrapper {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
+
+/* main {
+	flex: 1 0 auto;
+} */
 
 a {
 	color: inherit;
@@ -218,11 +225,11 @@ a {
 }
 
 .home-shell {
-	padding-block: clamp(3.25rem, 7vw, 6.5rem) clamp(4rem, 9vw, 8rem);
+	padding-block: 3em;
 }
 
 .home-intro {
-	padding-bottom: clamp(3.25rem, 7vw, 5.75rem);
+	padding-bottom: clamp(2.25rem, 7vw, 2.75rem);
 }
 
 .eyebrow {
@@ -252,7 +259,7 @@ a {
 	max-width: 58ch;
 	margin-top: clamp(2rem, 5vw, 3.5rem);
 	color: var(--muted);
-	font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+	font-size: clamp(0.95rem, 1.7vw, 0.95rem);
 	line-height: 1.65;
 }
 
@@ -267,7 +274,6 @@ a {
 .home-section {
 	display: flex;
 	gap: 2rem;
-	padding-block: clamp(1.5rem, 2.5vw, 2.25rem);
 }
 
 .home-section + .home-section {
@@ -304,7 +310,7 @@ a {
 
 .section-body > p {
 	margin: 0;
-	font-size: clamp(0.95rem, 1.35vw, 1.05rem);
+	font-size: clamp(0.95rem, 1.35vw, 0.95rem);
 	line-height: 1.65;
 }
 

@@ -23,10 +23,12 @@
 
 <a class="skip-link" href="#main-content">Skip to content</a>
 
-<Header />
+<div class="wrapper">
+	<Header />
 
-<main id="main-content">
-	{@render children()}
-</main>
+	<main id="main-content">
+		{@render children()}
+	</main>
 
-<Footer />
+	<Footer />
+</div>
