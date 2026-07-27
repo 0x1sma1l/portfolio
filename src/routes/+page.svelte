@@ -16,6 +16,7 @@
 	<section class="home-intro" aria-labelledby="intro-title">
 		<p class="eyebrow">Ismail Muyideen</p>
 		<h1 id="intro-title">Frontend got me here. Systems is next.</h1>
+		<!--
 		<div class="home-intro__copy">
 			<p>
 				Half of what's here is proof of what I've been up to. The other half is a slightly chaotic
@@ -23,6 +24,7 @@
 				stuff. Both halves are still under construction.
 			</p>
 		</div>
+		-->
 	</section>
 
 	<section class="home-section" id="about" aria-labelledby="about-title">

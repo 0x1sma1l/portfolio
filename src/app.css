@@ -229,7 +229,7 @@ a {
 }
 
 .home-intro {
-	padding-bottom: clamp(2.25rem, 7vw, 2.75rem);
+	padding-bottom: clamp(3.25rem, 7vw, 3.75rem);
 }
 
 .eyebrow {
